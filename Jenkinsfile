@@ -33,4 +33,7 @@ node {
             app.push("latest")
         }
     }
+    stage("Run Container") {
+    docker.image("kevinzhangsfi/addressbook").run()
+    }
 }
