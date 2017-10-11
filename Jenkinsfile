@@ -33,7 +33,7 @@ node {
             app.push("latest")
         }
     }
-    stage("Run Container") {
-    docker.image('kevinzhangsfi/addressbook:latest').withrun(' -p 8080:8080')
+    stage('Run Container') {
+    docker.image('kevinzhangsfi/addressbook:latest').run(' -p 8080:8080')
     }
 }
