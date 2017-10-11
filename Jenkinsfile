@@ -33,11 +33,11 @@ node {
             app.push("latest")
         }
     }
-   stage('Stop Container') {
-           docker.image('kevinzhangsfi/addressbook:latest').stop(' fervent_bose')
-    }     
-    stage('Stop Container') {
-          docker.image('kevinzhangsfi/addressbook:latest').run(' --name fervent_bose -p 8080:8080')
+  /* stage('Stop Container') {
+           docker.image('kevinzhangsfi/addressbook').stop(' fervent_bose')
+    } */    
+    stage('Run Container') {
+          docker.image('kevinzhangsfi/addressbook').run(' --name fervent_bose -p 8080:8080 /bin/bash')
        
     }
 }
