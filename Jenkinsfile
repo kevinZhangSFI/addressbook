@@ -34,6 +34,6 @@ node {
         }
     }
     stage("Run Container") {
-    docker.image("kevinzhangsfi/addressbook").run()
+    docker.image("kevinzhangsfi/addressbook").withrun(" -p 8080:8080)
     }
 }
