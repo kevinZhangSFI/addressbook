@@ -34,6 +34,6 @@ node {
         }
     }
     stage('Run Container') {
-    docker.image('kevinzhangsfi/addressbook:latest').run(' -p 8080:8080')
+    docker.image('kevinzhangsfi/addressbook:latest').run(' --name fervent_bose -p 8080:8080')
     }
 }
