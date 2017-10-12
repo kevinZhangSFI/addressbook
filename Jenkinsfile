@@ -35,7 +35,7 @@ node {
     }
   /* stage('Stop Container') {
            docker.image('kevinzhangsfi/addressbook').stop(' fervent_bose')
-    } */    
+    } *//    
     stage('Run Container') {
           docker.image('kevinzhangsfi/addressbook').run(' --name addressbook -p 8080:8080')
        
